@@ -1,24 +1,5 @@
-# README
+# NOTED
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Noted is a music website for music lovers to express their opinions about music, share saved music and look at user reviews, this is why they choose noted.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Be apart of a music community and share the music they love
