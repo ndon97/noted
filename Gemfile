@@ -20,6 +20,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'simple_form', github: 'heartcombo/simple_form'
 # gem "font-awesome-sass", "~> 5.6.1"
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.16.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
