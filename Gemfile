@@ -15,6 +15,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'image_processing', '~> 1.2'
+
 # ------Additional Gems-----------
 gem 'simple_form', github: 'heartcombo/simple_form'
 
