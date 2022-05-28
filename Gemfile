@@ -17,8 +17,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'image_processing', '~> 1.2'
 
 # ------Additional Gems-----------
-# gem 'simple_form', github: 'heartcombo/simple_form'
-# gem "font-awesome-sass", "~> 5.6.1"
+gem 'simple_form', github: 'heartcombo/simple_form'
+gem "font-awesome-sass", "~> 5.6.1"
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 
