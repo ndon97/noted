@@ -1,5 +1,3 @@
-require 'dotenv/load'
-
 class ApplicationController < ActionController::Base
   RSpotify.authenticate(ENV['spotify_client_id'], ENV['spotify_secret_key'])
 
