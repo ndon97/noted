@@ -18,6 +18,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # ------Additional Gems-----------
 gem 'simple_form', github: 'heartcombo/simple_form'
+gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 6.1.1'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
@@ -42,6 +43,7 @@ group :development do
 end
 
 group :assets do
+
   gem 'uglifier'
 end
 
