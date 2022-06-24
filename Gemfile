@@ -18,7 +18,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # ------Additional Gems-----------
 gem 'simple_form', github: 'heartcombo/simple_form'
-gem 'autoprefixer-rails'
+gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 6.1.1'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
@@ -32,6 +32,9 @@ gem 'semantic-ui-sass'
 
 # ----------------------------------
 group :development, :test do
+  gem 'pry-byebug'
+  gem 'pry-rails'
+
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -42,10 +45,7 @@ group :development do
   gem 'spring'
 end
 
-group :assets do
 
-  gem 'uglifier'
-end
 
 group :test do
   gem 'capybara', '>= 3.26'
