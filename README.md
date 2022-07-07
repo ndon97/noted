@@ -4,7 +4,10 @@ Noted is a music website for music lovers to express their opinions about music,
 
 Be apart of a music community and share the music they love
 
+This project was created using Ruby on Rails, a framework that was brought out initally August 2004
 
-This is the nash branch
-
-This is the ahad branch
+The main contributors are 
+1. Nash (Main Lead)
+2. Ahad Abdul (Contributor) 
+3. Nick Don (Contributor) 
+4. Josh Smith (Support) 
