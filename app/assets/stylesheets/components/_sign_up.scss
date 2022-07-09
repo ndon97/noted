@@ -15,6 +15,11 @@ hr.solid{
   border-top: 3px solid #B4C3B2;
 }
 
+hr.solid-sidebar{
+  border-top: 3px solid #B4C3B2;
+  transform: rotate(90deg);
+}
+
 .note{
   position: absolute;
   top:20px;
@@ -36,4 +41,22 @@ hr.solid{
   top:120px;
   left: 125px;
   font-size: 3rem;
+}
+
+.form-control{
+border-top: 0;
+border-left: 0;
+border-right:0;
+border-bottom: 3px solid #4D5759;
+}
+
+.form-label{
+  color: #4D5759;
+  font-weight: 600;
+}
+
+
+.login{
+
+  height: 100vh
 }
