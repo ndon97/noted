@@ -1,13 +1,24 @@
-<h1>HOME PAGE</h1>
+<div class='container'>
+  <h2 class='m-3'>Popular Reviews</h2>
+  <hr/>
+    <div class='row'>
+      <% @artists.each do |artist| %>
+      <div class='col mb-4'>
+      <a href=<%="pages/search/#{artist.id}/artist"%> class='link-dark text-decoration-none'>
+      <%= render "partials/card", data: artist %>
+      </a>
 
-<%= link_to "search", "pages/search"  %>
-
-
-
-
-    <%= form_tag "pages/search", method: :get do %>
-      <div class="ui fluid icon input">
-        <%= text_field_tag :searchText, params[:searchText], placeholder: "Search an artisit now...", class: "ui big icon input"%>
-        <i class="search icon"></i>
       </div>
-    <% end %>
+      <% end %>
+    </div>
+  <h2 class='m-3'>Popular Albums</h2>
+  <hr/>
+  <div class='row'>
+  <% @albums.each do |album| %>
+  <div class='col mb-4'>
+   <a href=<%="pages/search/#{album.id}/album"%> class='link-dark text-decoration-none'>
+   <%= render "partials/card", data: album %>
+   </a>
+   </div>
+  <% end %>
+  </div>
