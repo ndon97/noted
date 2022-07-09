@@ -1,0 +1,31 @@
+.btn-main{
+  background-color: #E4B2B8;
+  color: #4D5759;
+}
+
+.mr-5{
+  margin-right: 3rem;
+}
+
+.btn-alt{
+  border: 2px solid #4D5759;
+  border-radius: 0.5rem ;
+}
+
+a{
+  text-decoration: none;
+  color: #4D5759;
+  transition: 0.3s;
+}
+a:hover{
+  color:white;
+  background-color: #b4c3b2;
+  border: 2px solid #b4c3b2;
+
+}
+
+
+.form-check-input:checked{
+  background-color: #E4B2B8;
+  border-color: #E4B2B8;
+}
