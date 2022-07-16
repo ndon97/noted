@@ -12,11 +12,8 @@ class PagesController < ApplicationController
       @resultsArtist = MusicAPI.new.findArtist(params[:searchText])
     else
       @resultsArtist = MusicAPI.new.findArtist(params[:id])
+      @top_tracks = @resultsArtist.top_tracks(:US).first(4)
     end
-  end
-
-  def searchAlbum
-    @resultsAlbum = MusicAPI.new.findAlbum(params[:id])
   end
 
   def searchTrack
