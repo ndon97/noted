@@ -5,32 +5,42 @@
   </div>
 
   <div class="container album-details">
-
     <div class="rating-box border border-dark border-3 me-4">
       <div class="rating">
         <i class="fawesome fa-solid fa-music"></i>
       </div>
         <p class="rating-text">4.7</p>
     </div>
-
     <div class="album-info">
-      <div class="album-name me-3">
-        <h1><%= @album.name %> </h1>
-        <hr>
-        <h4><%= @album.artists[0].name %></h4>
-        <p><%= @album.total_tracks%>  songs</p>
-
+      <div class="album-details border-bottom border-dark me-3">
+        <h1><%= @album.name %> </h1>	&nbsp;	&nbsp;	&nbsp;	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;	&nbsp;	&nbsp;	&nbsp; &nbsp; &nbsp; &nbsp;
+        <p class="songs">Album-<%= @album.total_tracks%>  Tracks- <%= @album.release_date.split("-").first %></p>
+      </div>
+      <h4 class="artist-nm"><%= @album.artists[0].name %></h4>
       </div>
     </div>
-
   </div>
 
 </div>
 
+
+<div class="album-review border border-dark p-5">
+    <%= simple_form_for [ @album_review ] do |f| %>
+      <%= f.input :description , as: :text, :input_html => { :rows => 3 }, placeholder: "Post a review here", label: false%>
+      <%= f.input :rating, collection: 0..5 %>
+      <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
+      <%= f.input :api_id, as: :hidden, input_html: { value: @album.id } %>
+      <%= f.submit "Submit review", class: "btn btn-primary" %>
+    <% end %>
+</div>
+
+
+<div class="display-reviews">
+
   <div class="reviewed-songs mt-5">
-    <h2>Hot Reviews</h2>
-    <hr>
-  </div>
+      <h2>Hot Reviews</h2>
+      <hr>
+    </div>
 
   <div class="card" style="width: 18rem;">
     <div class="card-body p-2 d-flex flex-column justify-content-between align-items-center ">
@@ -42,14 +52,8 @@
     </div>
   </div>
 
-
 </div>
 
-<%= simple_form_for [ @album_review ] do |f| %>
-  <%= f.input :description %>
-  <%= f.input :rating, collection: 0..5%>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
-<% end %>
 
 
 <%# <p><%= @album.release_date %> </p>
