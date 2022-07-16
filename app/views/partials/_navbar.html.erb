@@ -1,11 +1,9 @@
 
 <header class="py-3 noted-bg flex-grow-1">
     <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 4.5fr 2fr;">
-      <div class="dropdown">
-        <a href="#" class="d-flex link-dark text-decoration-none" id="dropdownNavLink" data-bs-toggle="dropdown" aria-expanded="false">
+        <a href="/" class="d-flex link-dark text-decoration-none">
           <img src='https://res.cloudinary.com/dh8a307rs/image/upload/v1657791144/Artboard_3_tztpx9.png' class='noted-img'>
         </a>
-    </div>
     <div class="d-flex align-items-center">
       <div class='w-100 me-3 '>
         <%= simple_form_for :searchText, url: results_path , method: :get do |f| %>
