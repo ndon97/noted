@@ -3,5 +3,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @album_reviews = AlbumReview.where(user_id: @user.id)
     @count = AlbumReview.where(user_id: @user.id)
+
+    @songs_reviews = SongReview.where(user_id: @user.id)
   end
 end
