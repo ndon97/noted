@@ -24,27 +24,53 @@
     </div>
   </div>
 </div>
-<div class="container mt-5" id="recent-reviews">
+
+<div class="container my-5" id="recent-reviews-album">
   <div class="d-flex justify-content-between align-items-end">
-    <h2 class="fs-2">Your Recent Reviews</h2>
+    <h2 class="fs-2">Your Recent Album Reviews</h2>
     <a href="" class="btn-main rounded py-1 px-5">See More</a>
   </div>
 
   <hr class="solid mb-3">
 
   <div class="row">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-6 col-lg-8">
       <div>
-        <div>
-          <%= @album_reviews[-1]&.rating %>
-          <%= @album_reviews[-1]&.title %>
+        <div class="mb-3 d-flex align-items-end">
+          <%= render "partials/rating-box", class: "me-5", data:@album_reviews[-1].rating %>
+          <h5><%= @album_reviews[-1]&.title %></h5>
         </div>
         <%= @album_reviews[-1]&.description %>
       </div>
     </div>
 
-    <div class="col-sm-6 ">
+    <div class="col-sm-12 col-md-6 col-lg-4">
       <%= render "partials/quad_tracks", data:@album_reviews, class:"d-flex align-items-end" %>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5" id="recent-reviews-song">
+  <div class="d-flex justify-content-between align-items-end">
+    <a href="" class="btn-main rounded py-1 px-5">See More</a>
+    <h2 class="fs-2">Your Recent Song Reviews</h2>
+  </div>
+
+  <hr class="solid mb-3">
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-8">
+      <div>
+        <div class="mb-3 d-flex align-items-end">
+          <%= render "partials/rating-box", class: "me-5", data:@song_reviews[-1].rating %>
+          <h5><%= @song_reviews[-1]&.title %></h5>
+        </div>
+        <%= @song_reviews[-1]&.description %>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <%= render "partials/quad_tracks", data:@song_reviews, class:"d-flex align-items-end" %>
     </div>
   </div>
 </div>
