@@ -16,9 +16,9 @@
         <h5>Bio</h5>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, deserunt quae? Blanditiis veritatis perspiciatis earum molestias mollitia cumque eum <quos class=""></quos></p>
         <div class="user-info d-flex flex-column">
-          <span>Posted Reviews: <%= @count.count %></span>
-          <span>Rated Albums: 20</span>
-          <span>Rated Songs: 45</span>
+          <span>Rated Reviews: <%= @album_reviews.count +  @song_reviews.count %></span>
+          <span>Rated Albums: <%= @album_reviews.count  %></span>
+          <span>Rated Songs: <%= @song_reviews.count %></span>
         </div>
       </div>
     </div>
