@@ -9,10 +9,11 @@
     </div>
     <div class="album-info">
       <div class="album-details border-bottom border-dark me-3">
-          <h1 class='album-name'><%= @album.name %> </h1>
+          <h1 class='album-name'><%= @album&.name %> </h1>
           <p class="songs">Album-<%= @album.total_tracks%>  Tracks- <%= @album.release_date.split("-").first %></p>
       </div>
-      <h4 class="artist-nm"><%= @album.artists[0].name %></h4>
+      <h4 class="artist-nm"><%= @album&.artists[0]&.name %></h4>
+      </div>
     </div>
   </div>
 
@@ -60,10 +61,10 @@
         </div>
         <div class="display-album-reviews">
           <div class="album-description">
-            <i class="fas fa-quote-left me-2"></i><%= review.description %> <i class="fas fa-quote-right me-2"></i>
+            <i class="fas fa-quote-left me-2"></i><%= review&.description %> <i class="fas fa-quote-right me-2"></i>
           </div>
           <div class="album-rating">
-            <%= render "partials/rating-box", data:review.rating%>
+            <%= render "partials/rating-box", data:review&.rating%>
           </div>
         </div>
         <hr>
