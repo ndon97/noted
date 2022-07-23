@@ -16,9 +16,9 @@
         <h5>Bio</h5>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, deserunt quae? Blanditiis veritatis perspiciatis earum molestias mollitia cumque eum <quos class=""></quos></p>
         <div class="user-info d-flex flex-column">
-          <span>Posted Reviews: <%= @count.count %></span>
-          <span>Rated Albums: 20</span>
-          <span>Rated Songs: 45</span>
+          <span>Rated Reviews: <%= @album_reviews.count +  @song_reviews.count %></span>
+          <span>Rated Albums: <%= @album_reviews.count  %></span>
+          <span>Rated Songs: <%= @song_reviews.count %></span>
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@
     <div class="col-sm-12 col-md-6 col-lg-8">
       <div>
         <div class="mb-3 d-flex align-items-end">
-          <%= render "partials/rating-box", class: "me-5", data:@album_reviews[-1].rating %>
+          <%= render "partials/rating-box", class: "me-5", data:@album_reviews[-1]&.rating %>
           <h5><%= @album_reviews[-1]&.title %></h5>
         </div>
         <%= @album_reviews[-1]&.description %>
@@ -62,7 +62,7 @@
     <div class="col-sm-12 col-md-6 col-lg-8">
       <div>
         <div class="mb-3 d-flex align-items-end">
-          <%= render "partials/rating-box", class: "me-5", data:@song_reviews[-1].rating %>
+          <%= render "partials/rating-box", class: "me-5", data:@song_reviews[-1]&.rating %>
           <h5><%= @song_reviews[-1]&.title %></h5>
         </div>
         <%= @song_reviews[-1]&.description %>
