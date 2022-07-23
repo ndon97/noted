@@ -11,7 +11,7 @@
           <% @resultsArtist.genres.each do |genre| %>
             <% str += genre + ", " %>
           <% end %>
-          <%= str %>
+          <%= str[0...-2] %>
         </div>
         <button class = "more-btn">More</button>
       </div>
@@ -36,13 +36,15 @@
         </li>
       <% end %>
     </ul>
+    <div class = "show-more-icon">
+      <i class="fa-solid fa-circle-chevron-down"></i>
+    </div>
   </div>
 
   <div class = "reviewed-albums-container">
     <div class = "reviews-title">Most Reviewed Albums</div>
     <div class = "title-divider"></div>
     <ul class = "reviewed-albums">
-
       <% @top_albums.each do |album|  %>
         <li class = reviewed-albums-item>
           <img class = "albums-review-img"src = <%= album.images[0]['url']%> />
