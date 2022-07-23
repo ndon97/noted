@@ -13,21 +13,23 @@
           <%= @user.last_name %>
         </div>
         <hr class="solid mb-3">
-        <h5>Bio</h5>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, deserunt quae? Blanditiis veritatis perspiciatis earum molestias mollitia cumque eum <quos class=""></quos></p>
-        <div class="user-info d-flex flex-column">
-
-          <div class="d-flex flex-column">
-            <span class="">Rated Reviews:</span>
-            <span class="fw-bold fs-2"><%= @album_reviews.count +  @song_reviews.count %></span>
+        <h5 class="fs-3">About Me</h5>
+        <p class="mb-3">Hi im a music lover, I enjoy listening to RNB, Hiphop, Rap, Jazz and Classical music. The weirdest band I've seen live is a Japanese Jazz-Rock band in Tokyo</p>
+        <div class="user-info d-flex justify-content-start py-3">
+          <div class="d-flex flex-column me-3">
+            <span class="fs-5">Rated Reviews</span>
+            <span class="fw-bold fs-3 text-center"><%= @album_reviews.count +  @song_reviews.count %></span>
           </div>
 
-          <div class="d-flex flex-column">
-            <span>Rated Albums:</span>
-            <span class="fw-bold fs-2"> <%= @album_reviews.count  %></span>
+          <div class="d-flex flex-column me-3">
+            <span class="fs-5">Rated Albums</span>
+            <span class="fw-bold fs-3 text-center"> <%= @album_reviews.count  %></span>
           </div>
 
-          <span>Rated Songs: <%= @song_reviews.count %></span>
+          <div class="d-flex flex-column me-3">
+            <span class="fs-5">Rated Songs</span>
+            <span class="fw-bold fs-3 text-center"><%= @song_reviews.count %></span>
+          </div>
         </div>
       </div>
     </div>
