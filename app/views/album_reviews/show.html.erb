@@ -5,7 +5,7 @@
 
   <div class="container album-details">
     <div class="album-box">
-      <%= render "partials/rating-box", data:4%>
+        <%= render "partials/rating-box", data:@finalsum%>
     </div>
     <div class="album-info">
       <div class="album-details border-bottom border-dark me-3">
@@ -38,7 +38,7 @@
       <% @tracks.each do |track| %>
         <li class = "song-item">
           <div class = "song-info">
-            <div class = "rating-box-artist"> <%= render "partials/rating-box", data: 4.7 %></div>
+            <div class = "rating-box-artist"> <%= render "partials/rating-box", data: (track.popularity/20.to_f).round(1) %></div>
             <div class = "song-name"><%= track.name %></div>
           </div>
           <%= link_to "Reviews", song_review_path(track.id), class: "song-reviews" %>
