@@ -23,6 +23,7 @@
   border: 1mm ridge #e4b2b89b;
   width: 525px;
   margin-right: 20px;
+  border-radius: 20px;
 }
 
 #song_review_description {
@@ -36,14 +37,21 @@
 #song_review_rating {
   width: 128.5%;
   margin-left: -38px;
+  border-radius: 10px;
 }
 
 
 .song-btn {
   width: 128.5%;
+  height: 38px;
 }
+
 
 .rating-text {
   margin-left: -32px;
   width: 125%;
+}
+
+.display-song-reviews {
+  width: 80%;
 }
