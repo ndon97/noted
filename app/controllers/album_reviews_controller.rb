@@ -23,9 +23,20 @@ class AlbumReviewsController < ApplicationController
   def rating_score
     sum = 0
     @reviews.each do |review|
-      sum += review.rating
+      if review.rating
+    sum += review&.rating
+      end
     end
-    @reviews.count.zero? ? '0.0' : (sum / @reviews.count.to_f)
+    @reviews&.count&.zero? ? '0.0' : (sum / @reviews.count.to_f)
+  end
+
+  def destroy
+    @album_review = AlbumReview.find(params[:id])
+    @album_review.destroy
+    albumid = @album_review.api_id
+    redirect_to album_review_path(albumid)
+  end
+
   end
 
   def review_params

@@ -33,10 +33,10 @@
 </div>
 
 
-<div>
-  <h2 class="ms-3 mt-3">Hot Reviews</h2><hr>
+<div class= "container display-song-reviews">
+  <h2 class="ms-3 mt-4">Hot Reviews</h2><hr>
 
-  <div class="display-reviews mt-5">
+  <div class="display-reviews mt-2">
     <div class="reviews p-2">
       <% @reviews.each do |review|%>
         <div>
@@ -49,6 +49,9 @@
           </div>
           <div class="album-rating">
           <%= render "partials/rating-box", data:review.rating%>
+          <% if review.user_id == current_user.id %>
+                <%= button_to "Delete", song_review_path(review.id), class: 'btn link-danger hover-icon', method: :delete%>
+              <% end %>
           </div>
         </div>
         <hr>
