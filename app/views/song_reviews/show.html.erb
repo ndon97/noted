@@ -7,7 +7,7 @@
 
 <div class="container song-container album-details">
   <div class="song-rating-box">
-    <%= render "partials/rating-box", data:4%>
+    <%= render "partials/rating-box", data:(@song.popularity/20.to_f).round(1)%>
   </div>
   <div class="song-details">
     <div class="song-name">
