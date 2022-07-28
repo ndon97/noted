@@ -37,8 +37,6 @@ class AlbumReviewsController < ApplicationController
     redirect_to album_review_path(albumid)
   end
 
-  end
-
   def review_params
     params.require(:album_review).permit(:description, :rating, :api_id, :user_id, :title)
   end
