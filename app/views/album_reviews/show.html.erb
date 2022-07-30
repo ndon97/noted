@@ -4,7 +4,7 @@
   </div>
   <div class="container album-details">
     <div class="album-box">
-     <%= render "partials/rating-box", data:@finalsum.to_f.round(1)%>
+      <%= render "partials/rating-box", data:@finalsum.to_f.round(1)%>
     </div>
     <div class="album-info">
       <div class="album-details border-bottom border-dark me-3">
@@ -35,7 +35,7 @@
         <% @tracks.each do |track| %>
           <li class = "song-item">
             <div class = "song-info">
-             <div class = "rating-box-artist"> <%= render "partials/rating-box", data: (track.popularity/20.to_f).round(1) %></div>
+              <div class = "rating-box-artist"> <%= render "partials/rating-box", data: (track.popularity/20.to_f).round(1) %></div>
               <div class = "song-name"><%= track.name %></div>
             </div>
             <%= link_to "Reviews", song_review_path(track.id), class: "song-reviews" %>
@@ -45,18 +45,18 @@
     </div>
   </div>
   <div class='col'>
-   <div class="mt-3" >
+    <div class="mt-3" >
       <h2 class="ms-3">Hot Reviews</h2>
       <hr>
       <div class="display-reviews">
         <div class="reviews p-2">
           <% @reviews.each do |review|%>
-          <a href="/users/<%= review.user_id %>" class="modal-links">
-            <div>
-            <%= cl_image_tag User.find(review.user_id).photo.key, class:'review-user-image border border-dark ms-3 me-2'%>
-              <span><%=User.find(review.user_id).username%></span>
-            </div>
-          </a>
+            <a href="/users/<%= review.user_id %>" class="modal-links">
+              <div>
+                <%= cl_image_tag User.find(review.user_id).photo.key, class:'review-user-image border border-dark ms-3 me-2'%>
+                <span><%=User.find(review.user_id).username%></span>
+              </div>
+            </a>
             <div class="display-album-reviews">
               <div class="album-description">
                 <i class="fas text-muted fa-quote-left me-2"></i><%= review&.description %> <i class="fas text-muted fa-quote-right me-2"></i>
@@ -64,8 +64,8 @@
               <div class="album-rating">
                 <%= render "partials/rating-box", data:review&.rating.to_f%>
                 <% if review.user_id == current_user.id %>
-                <%= button_to "Delete", album_review_path(review.id), class: 'btn link-danger hover-icon', method: :delete%>
-              <% end %>
+                  <%= button_to "Delete", album_review_path(review.id), class: 'btn link-danger hover-icon', method: :delete%>
+                <% end %>
               </div>
             </div>
             <hr>
