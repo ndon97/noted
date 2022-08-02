@@ -50,32 +50,33 @@
       <hr>
       <div class="display-reviews">
         <% if @reviews.empty? %>
-        <h4 class ="no-reviews-title">
-          Be the first to post a review!
-        </h4>
+          <h1 class ="text-center fw-semibold fs-4">
+            There are currently no reviews for this album.
+          </h1>
+        <% else %>
+          <div class="reviews p-2">
+            <% @reviews.each do |review|%>
+              <a href="/users/<%= review.user_id %>" class="modal-links">
+                <div>
+                  <%= cl_image_tag User.find(review.user_id).photo.key, class:'review-user-image border border-dark ms-3 me-2'%>
+                  <span><%=User.find(review.user_id).username%></span>
+                </div>
+              </a>
+              <div class="display-album-reviews">
+                <div class="album-description">
+                  <i class="fas text-muted fa-quote-left me-2"></i><%= review&.description %> <i class="fas text-muted fa-quote-right me-2"></i>
+                </div>
+                <div class="album-rating">
+                  <%= render "partials/rating-box", data:review&.rating.to_f%>
+                  <% if review.user_id == current_user.id %>
+                    <%= button_to "Delete", album_review_path(review.id), class: 'btn link-danger hover-icon', method: :delete%>
+                  <% end %>
+                </div>
+              </div>
+              <hr>
+            <% end %>
+          </div>
         <% end %>
-        <div class="reviews p-2">
-          <% @reviews.each do |review|%>
-            <a href="/users/<%= review.user_id %>" class="modal-links">
-              <div>
-                <%= cl_image_tag User.find(review.user_id).photo.key, class:'review-user-image border border-dark ms-3 me-2'%>
-                <span><%=User.find(review.user_id).username%></span>
-              </div>
-            </a>
-            <div class="display-album-reviews">
-              <div class="album-description">
-                <i class="fas text-muted fa-quote-left me-2"></i><%= review&.description %> <i class="fas text-muted fa-quote-right me-2"></i>
-              </div>
-              <div class="album-rating">
-                <%= render "partials/rating-box", data:review&.rating.to_f%>
-                <% if review.user_id == current_user.id %>
-                  <%= button_to "Delete", album_review_path(review.id), class: 'btn link-danger hover-icon', method: :delete%>
-                <% end %>
-              </div>
-            </div>
-            <hr>
-          <% end %>
-        </div>
       </div>
     </div>
   </div>
