@@ -2,10 +2,10 @@
   <div class="row">
     <div class="col col-sm-12 col-md-6 my-5" >
       <div class="user-banner-left d-flex flex-column justify-content-center align-items-center">
-        <% if user.photo.key %>
+        <% unless @user.photo.key == nil %>
           <%= cl_image_tag @user&.photo&.key, class:'profile-img mb-5' %>
         <% else %>
-          <img src='https://i.pravatar.cc/300' class='profile-img mb-5'>
+          <img src='https://res.cloudinary.com/dh8a307rs/image/upload/v1657976924/fireworks_1_tscv62.png' class='profile-img mb-5'>
         <% end %>
         <div>
           <% if @user&.followers&.include?(current_user&.id) && @user&.id != current_user&.id %>
