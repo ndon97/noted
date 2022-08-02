@@ -4,10 +4,7 @@
 <% img_url = "" %>
 <% rating = 0 %>
 <% isTrack = false %>
-
 <% link = "" %>
-
-
 <% descriptionSize = 0 %>
 <% def select_box_size(str_len) %>
 <% size = "" %>
@@ -22,8 +19,6 @@
 <% end %>
 <% return size %>
 <% end %>
-
-
 <div class="feed--main-container container">
   <div class="feed--header">
     <div class = "reviews-title">Your Feed</div>
@@ -56,22 +51,22 @@
               <img class = "feed--img review-user-image border border-dark ms-3 me-2"/>
             <% end %>
             <div class="feed--rating-box">
-              <%= render "partials/rating-box", data:(rating).round(1) %>
+              <%= render "partials/rating-box", data:(rating)&.round(1) %>
             </div>
           </div>
           <div class="feed--review-info">
             <div class="feed--info-con">
               <div class="feed--username">
                 <a href="/users/<%= review.user_id %>" class="modal-links">
-                <%= username.first_name %>
+                  <%= username.first_name %>
                 </a>
               </div>
               <div class="feed--review-stats">
-                  <a href = <%= link %> >
-                    <div class="feed-review-title">
-                      <%= "#{review.title}" %>
-                    </div>
-                  </a>
+                <a href = <%= link %> >
+                  <div class="feed-review-title">
+                    <%= "#{review.title}" %>
+                  </div>
+                </a>
                 <span class="word-breaker"></span>
                 <div class="feed-review-type">
                   <%= "#{track_type}"  %>
