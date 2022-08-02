@@ -1,10 +1,9 @@
 :root {
-  --default-card-color: #B4C3B2;
+  --default-card-color: #b4c3b2;
   --vertical-card-color: #aac4a6;
   --big-card-color: #99b595;
   --horizontal-card-color: #b0d0ac;
 }
-
 
 .user-banner {
   background-color: #dedbd3;
@@ -18,8 +17,6 @@
   border-radius: 50%;
 }
 
-
-
 // <------------------ GENERAL FEED CONTAINER --------------------->
 $spanRow: 220px;
 $spanCol: 170px;
@@ -32,7 +29,13 @@ $spanCol: 170px;
   grid-auto-flow: dense;
 
   margin: 15px 20px;
+}
 
+.feed--username--text {
+  white-space: nowrap;
+  width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .feed--review-item {
@@ -42,7 +45,7 @@ $spanCol: 170px;
   padding: 15px;
   justify-content: flex-start;
 
-  background-image: linear-gradient(to bottom, #B4C3B2, #e5b4b4);
+  background-image: linear-gradient(to bottom, #b4c3b2, #e5b4b4);
 
   &.default {
     background-color: var(--default-card-color);
@@ -50,27 +53,24 @@ $spanCol: 170px;
     grid-column: span 1;
     grid-row: span 1;
   }
-  &.vertical{
+  &.vertical {
     background-color: var(--vertical-card-color);
 
-    grid-row: span 2 ;
+    grid-row: span 2;
   }
   &.big {
     background-color: var(--big-card-color);
 
-    grid-column:  span 2;
+    grid-column: span 2;
     grid-row: span 2;
   }
-  &.horizontal{
+  &.horizontal {
     background-color: var(--horizontal-card-color);
 
     grid-column: span 2;
     grid-row: span 1;
-
   }
 }
-
-
 
 .feed--review-con {
   display: flex;
@@ -84,7 +84,6 @@ $spanCol: 170px;
   justify-content: flex-start;
   align-items: center;
 }
-
 
 .feed--img-con .feed--img {
   margin-left: 0px !important;
@@ -131,15 +130,15 @@ $spanCol: 170px;
 }
 
 .feed--rating-box .score-box {
-    display: inline-flex;
-    border: 1px solid black;
-    padding: 5px 5px;
-    border-radius: 12px;
-    gap: 3px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 !important;
-    font-size: 12px;
+  display: inline-flex;
+  border: 1px solid black;
+  padding: 5px 5px;
+  border-radius: 12px;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 !important;
+  font-size: 12px;
 }
 
 .feed-review-title {
@@ -158,7 +157,7 @@ $spanCol: 170px;
   width: 5px;
 }
 
-.feed-talking-marks.text-muted  {
+.feed-talking-marks.text-muted {
   font-size: 12px;
   color: black !important;
   display: inline;
