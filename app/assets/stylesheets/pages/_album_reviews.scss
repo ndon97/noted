@@ -2,13 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
 .album-banner {
   background: linear-gradient(
     to right,
-    #DEDBD3 0%,
-    #DEDBD3 0%,
-    #DEDBD3 40%,
+    #dedbd3 0%,
+    #dedbd3 0%,
+    #dedbd3 40%,
     #e4b2b89b 100%
   );
   height: 450px;
@@ -16,23 +15,22 @@
 }
 
 .album-img {
-  height: 400px;
-  width: 400px;
+  height: 25rem;
+  width: 25rem;
   margin-top: 5px;
-
 }
 
 .album-name {
-  margin-right: 200px;
+  margin-right: 12.5rem;
 }
 
 .artist-nm {
-  margin-top: 12px;
+  margin-top: 0.75rem;
 }
 
 .songs {
-  margin-left: 14px;
-  margin-top: 16px;
+  margin-left: 0.875rem;
+  margin-top: 1rem;
 }
 
 .album-details {
@@ -41,76 +39,74 @@
 }
 
 .rating-box {
-  width: 100px;
-  height: 60px;
+  width: 6.25rem;
+  height: 3.75rem;
   display: flex;
   justify-content: center;
-  margin-top: 140px;
+  margin-top: 8.75rem;
   border-radius: 10%;
-  font-size: 25px;
+  font-size: 1.56rem;
 }
 
 .rating {
-  margin-right: 13px;
-  margin-top: 7px;
+  margin-right: 0.813rem;
+  margin-top: 0.438rem;
 }
 
 .rating-text {
-  margin-right: 13px;
-  margin-top: 7px;
+  margin-right: 0.813rem;
+  margin-top: 0.438rem;
 }
 
 .album-info {
-  margin-top: 135px;
+  margin-top: 8.438rem;
 }
 
 .album-review {
-  border: 1mm ridge #DEDBD3;
+  border: 1mm ridge #dedbd3;
   width: 600px;
-  margin-right: 20px;
-  border-radius: 20px;
+  margin-right: 1.25rem;
+  border-radius: 1.25rem;
 }
 
 #album_review_description {
   width: 130.5%;
-  height: 242px;
-  margin-left: -42px;
-  border-radius: 10px;
-  margin-top: -41px;
+  height: 15.125rem;
+  margin-left: -2.625rem;
+  border-radius: 0.625rem;
+  margin-top: -2.563rem;
 }
 
 #album_review_rating {
-  margin-left: -40px;
+  margin-left: -2.5rem;
   width: 129.5%;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 .album-submit {
-  margin-left: -41px;
+  margin-left: -2.563rem;
 }
 
 .display-album-reviews {
   display: flex;
   justify-content: space-between;
-  margin-left: 66px;
+  margin-left: 4.125rem;
 }
-
 
 .album-rating {
-  margin-right: 25px;
-  margin-top: -26px;
+  margin-right: 1.563rem;
+  margin-top: -1.625rem;
 }
 
-
 .reviews {
-  background-color:  #DEDBD3 ;
-  border-radius: 10px;
+  background-color: #dedbd3;
+  border-radius: 0.625rem;
 }
 
 .review-user-image {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   object-fit: cover;
   object-position: 0 10%;
 }
@@ -121,19 +117,19 @@
 }
 
 .review-submit {
-  margin-left: -39px;
+  margin-left: -2.438rem;
   width: 104.5%;
 }
 
 .rating-value {
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
 .text-rating {
-  margin-left: -30px;
+  margin-left: -1.875rem;
 }
 
 .album-box {
-  margin-top: 143px;
-  margin-right: -22px;
+  margin-top: 8.938rem;
+  margin-right: -1.375rem;
 }
