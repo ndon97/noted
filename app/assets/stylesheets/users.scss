@@ -100,10 +100,12 @@ $spanCol: 170px;
 
 .feed--info-con {
   font-size: 22px;
+  display: inline-block;
 }
 
 .feed--username {
   font-size: 0.7em;
+  max-height: 30px;
 }
 
 .feed--username > a {
@@ -178,6 +180,7 @@ $spanCol: 170px;
 }
 .feed--review-text {
   font-size: 1em;
+  display: inline-block;
 }
 
 .feed--review-item.default .review--text {
