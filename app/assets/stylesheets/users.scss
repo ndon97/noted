@@ -31,12 +31,17 @@ $spanCol: 170px;
   margin: 15px 20px;
 }
 
-.feed--username--text {
-  white-space: nowrap;
-  width: 50px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.feed--review-item.default {
+  .feed--username--text {
+    white-space: nowrap;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
+
+
+
 
 .feed--review-item {
   display: flex;
