@@ -191,21 +191,21 @@ $spanCol: 170px;
 
 .feed--review-item.default .review--text {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 0.9em;
 }
 .feed--review-item.horizontal .review--text {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 0.85em;
 }
 .feed--review-item.vertical .review--text {
   display: -webkit-box;
-  -webkit-line-clamp: 14;
+  -webkit-line-clamp: 15;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 0.75em;
@@ -217,7 +217,7 @@ $spanCol: 170px;
 
 .feed--review-item.big .review--text span{
   display: -webkit-box;
-  -webkit-line-clamp: 15;
+  -webkit-line-clamp: 16;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 1em;
