@@ -95,6 +95,14 @@ $spanCol: 170px;
   align-items: center;
 }
 
+.feed--img-con a {
+  background-color: transparent;
+}
+
+.feed--img-con a:hover {
+  background-color: transparent;
+}
+
 .feed--img-con .feed--img {
   margin-left: 0px !important;
 }
