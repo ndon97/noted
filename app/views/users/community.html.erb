@@ -48,7 +48,7 @@
             <% unless username.photo.key == nil %>
               <%= cl_image_tag username.photo.key, class: 'feed--img review-user-image border border-dark me-2'%>
             <% else  %>
-              <img class = "feed--img review-user-image border border-dark ms-3 me-2"/>
+              <img  src ='https://res.cloudinary.com/dh8a307rs/image/upload/v1657976924/fireworks_1_tscv62.png' class = "feed--img review-user-image border border-dark ms-3 me-2"/>
             <% end %>
             <div class="feed--rating-box">
               <%= render "partials/rating-box", data:(rating)&.round(1) %>
