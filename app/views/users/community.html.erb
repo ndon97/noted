@@ -33,12 +33,12 @@
       <% if (isTrack)  %>
         <%  track = MusicAPI.new.findTrack(review.api_id)  %>
         <%  track_type = "Song"  %>
-        <%  img_url = track.album.images[0]['url'] %>
+        <%  img_url = track.album.images[0]&.url  %>
         <%  link = "/song_reviews/#{track.id}" %>
       <% else %>
         <%  album = MusicAPI.new.findAlbum(review.api_id)  %>
         <%  track_type = "Album"  %>
-        <%  img_url = album.images[0]['url'] %>
+        <%  img_url = album.images[0]&.url  %>
         <%  link = "/album_reviews/#{album.id}" %>
       <% end %>
       <% username = User.find(review.user_id)%>

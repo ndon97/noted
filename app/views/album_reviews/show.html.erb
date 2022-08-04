@@ -1,6 +1,6 @@
 <div class="album-banner p-3 d-flex justify-content-end">
   <div class="album-img">
-    <img src="<%= @album.images[0]['url'] %>" class="album-img border border-dark border-4 p-2" alt="">
+    <img src="<%= @album.images[0]&.url %>" class="album-img border border-dark border-4 p-2" alt="">
   </div>
   <div class="container album-details">
     <div class="album-box">
@@ -14,7 +14,7 @@
         <div>
           <p class="songs">Album-<%= @album.total_tracks%>  Tracks- <%= @album.release_date.split("-").first %></p>
         </div>
-        </div>
+      </div>
       <h4 class="artist-nm"><%= @album.artists[0]&.name %></h4>
     </div>
   </div>
@@ -30,10 +30,6 @@
     <% end %>
   </div>
 </div>
-
-
-
-
 <div class='row'>
   <div class='col-lg-6 col-md-6 col-sm-12'>
     <div class="display-songs mt-3">
