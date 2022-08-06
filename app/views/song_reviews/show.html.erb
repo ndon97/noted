@@ -39,27 +39,25 @@
         There are currently no reviews for this song.
       </h4>
     <% end %>
-    <div class="reviews p-2">
-      <% @reviews.each do |review|%>
+    <% @reviews.each do |review|%>
       <a href="/users/<%= review.user_id %>" class="modal-links">
         <div>
           <%= cl_image_tag User.find(review.user_id).photo.key, class:'review-user-image border border-dark ms-3'%>
           &nbsp;<%=User.find(review.user_id).username%>
         </div>
-        </a>
-        <div class="display-album-reviews">
-          <div class="album-description">
-            <i class="fas text-muted fa-quote-left me-2"></i><%= review.description %> &nbsp;<i class="fas text-muted fa-quote-right me-2"></i>
-          </div>
-          <div class="album-rating">
-            <%= render "partials/rating-box", data:review.rating%>
-            <% if review.user_id == current_user.id %>
-              <%= button_to "Delete", song_review_path(review.id), class: 'btn link-danger hover-icon', method: :delete%>
-            <% end %>
-          </div>
+      </a>
+      <div class="display-album-reviews">
+        <div class="album-description">
+          <i class="fas text-muted fa-quote-left me-2"></i><%= review.description %> &nbsp;<i class="fas text-muted fa-quote-right me-2"></i>
         </div>
-        <hr>
-      <%  end  %>
-    </div>
+        <div class="album-rating">
+          <%= render "partials/rating-box", data:review.rating%>
+          <% if review.user_id == current_user.id %>
+            <%= button_to "Delete", song_review_path(review.id), class: 'btn link-danger hover-icon', method: :delete%>
+          <% end %>
+        </div>
+      </div>
+      <hr>
+    <%  end  %>
   </div>
 </div>
