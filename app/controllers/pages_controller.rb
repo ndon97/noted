@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
 
   def home
-    @artists = MusicAPI.new.displayArtist('bee gee')
+    @artists1 = MusicAPI.new.displayArtist('bee gee')
+    @artists2 = MusicAPI.new.displayArtist('arianna')
+    @artists3 = MusicAPI.new.displayArtist('vance')
+    @artists4 = MusicAPI.new.displayArtist('kate bush')
+    @artists5 = MusicAPI.new.displayArtist('Beyoncé')
     @albums = MusicAPI.new.displayAlbums('lil')
     @tracks = MusicAPI.new.displayTracks('bush')
   end
