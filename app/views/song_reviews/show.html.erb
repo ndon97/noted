@@ -43,7 +43,7 @@
       <% @reviews.each do |review|%>
         <div>
           <%= cl_image_tag User.find(review.user_id).photo.key, class:'review-user-image border border-dark ms-3'%>
-          &nbsp;<%=User.find(review.user_id).first_name%> <%= User.find(review.user_id).last_name %>
+          &nbsp;<%=User.find(review.user_id).username%>
         </div>
         <div class="display-album-reviews">
           <div class="album-description">
