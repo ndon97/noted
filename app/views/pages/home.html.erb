@@ -85,7 +85,7 @@
         </div>
       </a>
     <% end %>
-    <% @artists5[0..1]&.each do |artist| %>
+    <% @artists5[0...1]&.each do |artist| %>
       <a href=<%="pages/search/#{artist&.id}/artist"%> class='link-dark text-decoration-none'>
         <div class="col ">
           <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg noted-home-image" style="background-image: url('<%= artist&.images[0]&.url  %>');">
